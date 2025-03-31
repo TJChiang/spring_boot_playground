@@ -8,3 +8,9 @@ spring:
     redis:
       host: ${REDIS_HOST}
       port: ${REDIS_PORT}
+
+# custom properties
+coach:
+  name: whatever coach
+team:
+  name: whatever team
