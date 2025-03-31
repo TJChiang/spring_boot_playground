@@ -7,6 +7,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DemoController {
 
+    private Coach demoCoach;
+
+    public DemoController(Coach coach) {
+        this.demoCoach = coach;
+    }
+
+    @GetMapping("/dailyworkout")
+    public String getDailyWorkout() {
+        return demoCoach.getDailyWorkout();
+    }
+
     @Value("${coach.name}")
     private String coachName;
 
