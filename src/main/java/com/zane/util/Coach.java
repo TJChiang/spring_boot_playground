@@ -1,4 +1,4 @@
-package com.zane.demo.demo;
+package com.zane.util;
 
 public interface Coach {
 
