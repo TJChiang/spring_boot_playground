@@ -19,3 +19,9 @@ management:
   info:
     env:
       enabled: true
+
+info:
+  app:
+    name: spring_boot_demo
+    version: 1.0.0
+    description: A demo application for Spring Boot
