@@ -9,6 +9,17 @@ spring:
       host: ${REDIS_HOST}
       port: ${REDIS_PORT}
 
+# logging
+# logging:
+#   level:
+#     org:
+#       springframework: DEBUG
+#       hibernate: DEBUG
+#     com:
+#       zane: INFO
+#   file:
+#     name: logs/app.log
+
 # custom properties
 coach:
   name: whatever coach
