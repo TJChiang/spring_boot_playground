@@ -1,5 +1,6 @@
 package com.zane.demo.demo;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -7,11 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DemoController {
 
+    @Autowired
     private Coach demoCoach;
-
-    public DemoController(Coach coach) {
-        this.demoCoach = coach;
-    }
 
     @GetMapping("/dailyworkout")
     public String getDailyWorkout() {
