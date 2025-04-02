@@ -32,5 +32,8 @@ build/
 ### VS Code ###
 .vscode/
 
+### JetBrains ###
+.idea/
+
 .env
 logs/
