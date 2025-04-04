@@ -3,7 +3,7 @@ package com.zane.demo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages = {"com.zane.demo", "com.zane.util"})
+@SpringBootApplication()
 public class DemoApplication {
 
     public static void main(String[] args) {

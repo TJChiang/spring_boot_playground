@@ -1,4 +1,4 @@
-package com.zane.util;
+package com.zane.demo.demo;
 
 import org.springframework.stereotype.Component;
 
