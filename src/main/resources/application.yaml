@@ -13,6 +13,8 @@ spring:
   docker:
     compose:
       lifecycle-management: none
+  main:
+    lazy-initialization: true
 
 # logging
 # logging:

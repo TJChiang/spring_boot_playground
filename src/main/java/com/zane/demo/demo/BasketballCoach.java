@@ -1,11 +1,13 @@
 package com.zane.demo.demo;
 
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
-@Primary
 public class BasketballCoach implements Coach {
+
+    public BasketballCoach() {
+        System.out.println("BasketballCoach inside default constructor: " + getClass().getSimpleName());
+    }
 
     @Override
     public String getDailyWorkout() {

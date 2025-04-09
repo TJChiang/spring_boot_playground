@@ -12,7 +12,8 @@ public class DemoController {
     private Coach demoCoach;
 
     @Autowired
-    public void setInjection(Coach demoCoach) {
+    public void setInjection(@Qualifier("basketballCoach") Coach demoCoach) {
+        System.out.println("In constructor: " + getClass().getSimpleName());
         this.demoCoach = demoCoach;
     }
 
