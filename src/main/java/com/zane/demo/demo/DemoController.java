@@ -12,7 +12,7 @@ public class DemoController {
     private Coach demoCoach;
 
     @Autowired
-    public void setInjection(@Qualifier("trackCoach") Coach demoCoach) {
+    public void setInjection(Coach demoCoach) {
         this.demoCoach = demoCoach;
     }
 
