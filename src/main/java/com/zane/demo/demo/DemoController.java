@@ -1,6 +1,5 @@
 package com.zane.demo.demo;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,17 +8,25 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DemoController {
 
-    private Coach demoCoach;
+    private final Coach demoCoach;
+    private final Coach anotherCoach;
 
-    @Autowired
-    public void setInjection(@Qualifier("basketballCoach") Coach demoCoach) {
-        System.out.println("In constructor: " + getClass().getSimpleName());
+    public DemoController(
+            @Qualifier("basketballCoach") Coach demoCoach,
+            @Qualifier("basketballCoach") Coach anotherCoach
+    ) {
         this.demoCoach = demoCoach;
+        this.anotherCoach = anotherCoach;
     }
 
     @GetMapping("/dailyworkout")
     public String getDailyWorkout() {
         return demoCoach.getDailyWorkout();
+    }
+
+    @GetMapping("/check")
+    public String check() {
+        return "Comparing beans: myCoach and demoCoach are " + (demoCoach == anotherCoach);
     }
 
     @Value("${coach.name}")
