@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 public class CricketCoach implements Coach {
 
     public CricketCoach() {
-        System.out.println("CricketCoach inside default constructor: abc" + getClass().getSimpleName());
+        System.out.println("CricketCoach inside default constructor: " + getClass().getSimpleName());
     }
 
     @Override
