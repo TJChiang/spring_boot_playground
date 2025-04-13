@@ -10,7 +10,7 @@ public class DemoController {
 
     private final Coach demoCoach;
 
-    public DemoController(@Qualifier("swimCoach") Coach demoCoach) {
+    public DemoController(@Qualifier("whatever-name") Coach demoCoach) {
         System.out.println("In constructor: " + getClass().getSimpleName());
         this.demoCoach = demoCoach;
     }
