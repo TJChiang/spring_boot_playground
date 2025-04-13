@@ -9,24 +9,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
 
     private final Coach demoCoach;
-    private final Coach anotherCoach;
 
-    public DemoController(
-            @Qualifier("basketballCoach") Coach demoCoach,
-            @Qualifier("basketballCoach") Coach anotherCoach
-    ) {
+    public DemoController(@Qualifier("basketballCoach") Coach demoCoach) {
         this.demoCoach = demoCoach;
-        this.anotherCoach = anotherCoach;
     }
 
     @GetMapping("/dailyworkout")
     public String getDailyWorkout() {
         return demoCoach.getDailyWorkout();
-    }
-
-    @GetMapping("/check")
-    public String check() {
-        return "Comparing beans: myCoach and demoCoach are " + (demoCoach == anotherCoach);
     }
 
     @Value("${coach.name}")
