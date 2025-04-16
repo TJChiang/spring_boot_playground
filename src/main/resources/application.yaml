@@ -18,9 +18,10 @@ spring:
     banner-mode: off
 
 # logging
-# logging:
-#   level:
-#     org:
+logging:
+  level:
+    root: warn
+#    org:
 #       springframework: DEBUG
 #       hibernate: DEBUG
 #     com:
