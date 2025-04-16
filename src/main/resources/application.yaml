@@ -10,9 +10,10 @@ spring:
     redis:
       host: ${REDIS_HOST}
       port: ${REDIS_PORT}
-  docker:
-    compose:
-      lifecycle-management: none
+  datasource:
+    url: "jdbc:mysql://localhost:33060/playground"
+    username: root
+    password: root
 
 # logging
 # logging:
