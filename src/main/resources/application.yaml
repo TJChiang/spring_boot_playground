@@ -11,9 +11,10 @@ spring:
       host: ${REDIS_HOST}
       port: ${REDIS_PORT}
   datasource:
-    url: "jdbc:mysql://localhost:33060/playground"
-    username: root
-    password: root
+    url: ${PGSQL_URL}
+    username: ${PGSQL_USERNAME}
+    password: ${PGSQL_PASSWORD}
+    driver-class-name: org.postgresql.Driver
   main:
     banner-mode: off
 
