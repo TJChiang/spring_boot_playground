@@ -1,4 +1,4 @@
-create table students(
+create table student (
     id SERIAL primary key,
     first_name varchar(50) not null default '',
     last_name varchar(50) not null default '',
